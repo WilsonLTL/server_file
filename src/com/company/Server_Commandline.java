@@ -47,6 +47,7 @@ public class Server_Commandline {
     }
 
     private void sendFile(DataOutputStream out, String filename) throws IOException {
+        System.out.println("Sending file");
         byte[] buffer = new byte[1024];
         File file = new File(filename);
         FileInputStream fin = new FileInputStream(file);
@@ -62,6 +63,7 @@ public class Server_Commandline {
             count += len;
         }
         fin.close();
+        System.out.println("out");
     }
 
     public static void main(String[] args) throws IOException {
